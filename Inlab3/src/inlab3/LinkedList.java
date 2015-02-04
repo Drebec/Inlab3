@@ -12,16 +12,18 @@ public class LinkedList {
     public LinkedList() {
 
     }
+    
+    public int getSize() {
+        return size;
+    }
 
     public void addInOrder(int value) {
         Node newNode = new Node(value, null);
         if (head == null) {
             head = newNode;
-            size++;
         } else if (value >= head.getElement()) {
             newNode.setNextNode(head);
             head = newNode;
-            size++;
         } else {
             boolean placed = false;
             current = head;
@@ -33,10 +35,10 @@ public class LinkedList {
                     temp.setNextNode(newNode);
                     newNode.setNextNode(current);
                     placed = true;
-                    size++;
                 }
             }
         }
+        size++;
     }
 
     public void removeAtIndex(int index) {

@@ -27,11 +27,13 @@ public class Driver {
         list.addInOrder(-1);
 
         list.printList();
+        System.out.println(list.getSize());
 
         list.addInOrder(8);
         list.addInOrder(5);
 
         list.printList();
+        System.out.println(list.getSize());
         
 
         list.removeAtIndex(1);      //Changed 2 Feb from 0 to 1
